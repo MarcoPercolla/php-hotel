@@ -74,6 +74,15 @@
             echo "<td>".$hotel["vote"]."</td>";
             echo "<td>".$hotel["distance_to_center"]."</td>";
             echo "</tr>";
+        }elseif ($voteInput=="") {
+            echo "<tr>";
+            echo "<td>".$hotel["name"]."</td>";
+            echo "<td>".$hotel["description"]."</td>";
+            echo "<td>".$hotel["parking"]."</td>";
+            echo "<td>".$hotel["vote"]."</td>";
+            echo "<td>".$hotel["distance_to_center"]."</td>";
+            echo "</tr>";
+            
         }
        
     }
