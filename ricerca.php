@@ -7,8 +7,8 @@
 </head>
 <body>
     <form action="alberghi.php">
-        <label for="vote">vote:</label>
-        <input type="number" id="vote" name="vote" min="1" max="5" />
+        <label for="myvote">vote:</label>
+        <input type="number" id="myvote" name="myvote" min="1" max="5" />
         <button type="submit">search</button>
     </form>
 </body>

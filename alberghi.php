@@ -39,6 +39,7 @@
         ],
 
     ];
+    $voteInput = $_GET["myvote"] ?? "No vote";
 
 ?>
 <!DOCTYPE html>
@@ -50,7 +51,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
 </head>
 <body>
-    <main>
+<main>
         <table class="table table-striped table-dark">
   <thead>
     <tr>
@@ -65,13 +66,16 @@
     
         <?php
     foreach ($hotels as $hotel){
-        echo "<tr>";
-        echo "<td>".$hotel["name"]."</td>";
-        echo "<td>".$hotel["description"]."</td>";
-        echo "<td>".$hotel["parking"]."</td>";
-        echo "<td>".$hotel["vote"]."</td>";
-        echo "<td>".$hotel["distance_to_center"]."</td>";
-        echo "</tr>";
+        if ($hotel["vote"]<=$voteInput) {
+            echo "<tr>";
+            echo "<td>".$hotel["name"]."</td>";
+            echo "<td>".$hotel["description"]."</td>";
+            echo "<td>".$hotel["parking"]."</td>";
+            echo "<td>".$hotel["vote"]."</td>";
+            echo "<td>".$hotel["distance_to_center"]."</td>";
+            echo "</tr>";
+        }
+       
     }
     
     ?>
@@ -80,10 +84,12 @@
    
   </tbody>
 </table>
+<a href="ricerca.php">searchpage</a>
 
 
 
-    </main>
+
+</main>
     
 </body>
 </html>
