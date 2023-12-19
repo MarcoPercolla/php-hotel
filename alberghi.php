@@ -50,6 +50,25 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
 </head>
 <body>
+    <main>
+        <table class="table table-striped table-dark">
+  <thead>
+    <tr>
+      <th scope="col">name</th>
+      <th scope="col">description</th>
+      <th scope="col">parking</th>
+      <th scope="col">vote</th>
+      <th scope="col">distance to center</th>
+    </tr>
+  </thead>
+  <tbody>
+   
+  </tbody>
+</table>
+
+
+
+    </main>
     <?php
     foreach ($hotels as $hotel){
         echo "<p>".$hotel["name"]."</p>";
